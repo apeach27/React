@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script type="text/javascript">
+        console.log(React);
+        console.log(ReactDOM);
+
+        // // 정의
+        // class ClassComponent extends React.Component {
+        //     render() {
+        //         return <div>hello</div>;
+        //     }
+        // }
+
+        // // 사용
+        // ReactDOM.render (
+        //     <ClassComponent />,
+        //     document.querySelector('#root')
+        // )
+
+        // // 정의 1
+        // function FunctionComponent() {
+        //     return <div>hello1</div>;
+        // }
+
+        // 정의 2
+        // const FunctionComponent = () => {
+        //     return <div>Hello2</div>;
+        // }
+
+        const FunctionComponent = () => <div>Hello2</div>;
+
+        // 사용
+        ReactDOM.render(<FunctionComponent />, document.querySelector('#root'));
+
+    </script>
+</body>
+</html>
