@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script>
+        const rootElement = document.getElementById("root");
+
+        function random () {
+            const number = Math.floor(Math.random() * ( 10-1 ) + 1 );
+            const element = `
+            <button>${number}</button>
+            `;
+            rootElement.innerHTML = element;
+        }
+
+        setInterval(random, 1000);
+
+        /* 바닐라 JS는 변경으로 인해 Element 를 다시 그림*/
+
+    </script> -->
+
+<!-- 
+    <script type="text/babel">
+        const rootElement = document.getElementById("root");
+
+        function random () {
+            const number = Math.floor(Math.random() * ( 10-1 ) + 1 );
+            const element = 
+                <>
+                    <button>{number}</button>
+                    <div><p>{number}</p></div>
+                </>
+            ReactDOM.render(element, rootElement);
+        }
+
+        setInterval(random, 1000);
+
+        /* 리액트는 해당 내용만 변경됨 -- 불변객체 */
+    </script> -->
+
+<script type="text/babel">
+
+    function tick() {
+    const element = (
+        <div>
+        <h1>하이하이</h1>
+        <h2>현재 시각은 {new Date().toLocaleTimeString()}.</h2>
+        </div>
+    );
+    ReactDOM.render(
+        element,
+        document.getElementById('root')
+    );
+    }
+
+    setInterval(tick, 1000);
+
+</script>
+</body>
+</html>
